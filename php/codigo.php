@@ -4,6 +4,7 @@
     echo '
         <table class="table table-hover">
             <tr>
+                <th scope="col">ID</th>
                 <th scope="col">NOMBRE</th>
                 <th scope="col">APELLIDO</th>
                 <th scope="col">DNI</th>

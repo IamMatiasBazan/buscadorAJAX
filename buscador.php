@@ -12,9 +12,7 @@
 		<h1 class="text-center">PLATAFORMA DE CONTROL</h1>
 		<hr>
 		<div class="row text-center">
-			<div class="col">
-                <input type="button" class="btn btn-primary" value="CLIENTES" onclick="saludame(1);">
-            </div>
+			<div class="col"><input type="button" class="btn btn-primary" value="CLIENTES" onclick="saludame(1);"></div>
 			<div class="col">
 				<input type="button" class="btn btn-primary" value="EMPLEADOS" onclick="saludame(2);"><br><br>
 				
@@ -32,4 +30,56 @@
 			</div>
 		</div>
 	</div>
+
+
+<script>
+	function mi_busqueda() { 
+    	buscar = document.getElementById('cuadro_buscar').value;
+        var parametros = 
+        {
+            "mi_busqueda" : buscar,
+            "accion" : "4"
+        };
+
+      $.ajax({
+        data: parametros,
+        url: 'php/codigo.php',
+        type: 'POST',
+        
+        beforesend: function()
+        {
+          $('#mostrar_mensaje').html("Mensaje antes de Enviar");
+        },
+
+        success: function(mensaje)
+        {
+          $('#mostrar_mensaje').html(mensaje);
+        }
+      });
+    }
+
+	function saludame(boton) { 
+    	accion = boton;
+        var parametros = {
+            "accion" : accion
+        };
+
+        $.ajax({
+            data: parametros,
+            url: 'php/codigo.php',
+            type: 'POST',
+            
+            beforesend: function()
+            {
+            $('#mostrar_mensaje').html("Mensaje antes de Enviar");
+            },
+
+            success: function(mensaje)
+            {
+            $('#mostrar_mensaje').html(mensaje);
+            }
+        });
+    }
+</script>
 </body>
+</html>
