@@ -1,6 +1,20 @@
 <?php 
     include("../database/abrir_conexion.php");
 
+    $accion = $_POST['accion'];
+
+    switch($accion) {
+        case 1:
+            $tabla = $tabla1;
+        break;
+        case 2:
+            $tabla = $tabla2;
+        break;
+        case 3:
+            $tabla = $tabla3;
+        break;
+    }    
+
     echo '
         <table class="table table-hover">
             <tr>

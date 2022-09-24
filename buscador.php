@@ -33,7 +33,9 @@
 
 
 <script>
-	function mi_busqueda() { 
+	function mi_busqueda(boton) {
+        accion = boton;
+
     	buscar = document.getElementById('cuadro_buscar').value;
         var parametros = 
         {
