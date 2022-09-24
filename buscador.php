@@ -34,11 +34,10 @@
 
 <script>
 	function mi_busqueda(boton) {
-        accion = boton;
+      accion = boton;
 
     	buscar = document.getElementById('cuadro_buscar').value;
-        var parametros = 
-        {
+        var parametros = {
             "mi_busqueda" : buscar,
             "accion" : "4"
         };
