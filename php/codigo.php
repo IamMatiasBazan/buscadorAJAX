@@ -26,7 +26,7 @@
             </tr>
     ';
 
-    $resultados = mysqli_query($conexion, "SELECT * FROM $tabla1");
+    $resultados = mysqli_query($conexion, "SELECT * FROM $tabla");
     while($consulta = mysqli_fetch_array($resultados)) {
         echo '
             <tr>

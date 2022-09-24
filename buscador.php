@@ -12,14 +12,14 @@
 		<h1 class="text-center">PLATAFORMA DE CONTROL</h1>
 		<hr>
 		<div class="row text-center">
-			<div class="col"><input type="button" class="btn btn-primary" value="CLIENTES" onclick="saludame(1);"></div>
+			<div class="col"><input type="button" class="btn btn-primary" value="CLIENTES" onclick="button(1);"></div>
 			<div class="col">
-				<input type="button" class="btn btn-primary" value="EMPLEADOS" onclick="saludame(2);"><br><br>
+				<input type="button" class="btn btn-primary" value="EMPLEADOS" onclick="button(2);"><br><br>
 				
 				<input type="text" id="cuadro_buscar" class="form-control" onkeypress="mi_busqueda();">
 
 			</div>
-			<div class="col"><input type="button" class="btn btn-primary" value="ADMINISTRADORES" onclick="saludame(3);"></div>
+			<div class="col"><input type="button" class="btn btn-primary" value="ADMINISTRADORES" onclick="button(3);"></div>
 		</div>
 
 		<hr>
@@ -60,7 +60,7 @@
       });
     }
 
-	function saludame(boton) { 
+	function button(boton) { 
     	accion = boton;
         var parametros = {
             "accion" : accion
