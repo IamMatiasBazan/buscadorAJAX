@@ -44,7 +44,7 @@
 
       $.ajax({
         data: parametros,
-        url: 'php/codigo.php',
+        url: 'php/cod.php',
         type: 'POST',
         
         beforesend: function()
@@ -67,7 +67,7 @@
 
         $.ajax({
             data: parametros,
-            url: 'php/codigo.php',
+            url: 'php/cod.php',
             type: 'POST',
             
             beforesend: function()
