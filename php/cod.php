@@ -14,10 +14,28 @@
             </tr>
     ';
 
+    function tabla(){
+        echo "
+            <script> console.log('Pasando la tablas diferentes de todos los empleados');</script>
+        "; //Implementando codigo JavaScript con PHP 
+
+        switch($accion) {
+                case 1:
+                    $tabla = $tabla1;
+                break;
+                case 2:
+                    $tabla = $tabla2;
+                break;
+                case 3:
+                    $tabla = $tabla3;
+                break;
+        }
+    }
+
     if($accion == 4) {
         $mi_busqueda = $_POST['mi_busqueda'];
 
-        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla1 WHERE nombre LIKE '%$mi_busqueda%'");
+        $resultados = mysqli_query($conexion, "SELECT * FROM $tabla WHERE nombre LIKE '%$mi_busqueda%'");
         while($consulta = mysqli_fetch_array($resultados)) {
             echo '
                 <tr>
@@ -29,18 +47,7 @@
                 </tr>
             ';
         }        
-    } else {
-        switch($accion) {
-            case 1:
-                $tabla = $tabla1;
-            break;
-            case 2:
-                $tabla = $tabla2;
-            break;
-            case 3:
-                $tabla = $tabla3;
-            break;
-        }    
+    } else {    
     
         $resultados = mysqli_query($conexion, "SELECT * FROM $tabla");
         while($consulta = mysqli_fetch_array($resultados)) {
